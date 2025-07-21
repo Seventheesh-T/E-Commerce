@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
       localStorage.setItem("isLoggedIn", "true");
 
       // Redirect to bag.html (your main page)
-      window.location.href = "loggedin.html";
+      window.location.href = "index.html";
     } else {
       alert("Incorrect email or password. Please try again.");
     }
