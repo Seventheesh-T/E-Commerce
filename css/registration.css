@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f9d423, #ff4e50);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.form {
+  background-color: white;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 600px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #000000;
+  font-size: 24px;
+}
+
+table {
+  width: 100%;
+  border-spacing: 12px;
+}
+
+label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #2f3542;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+input[type="password"], /* ✅ Added this line */
+select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+select:focus {
+  border-color: #ff4e50;
+  box-shadow: 0 0 5px rgba(255, 78, 80, 0.5);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 6px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff4e50;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+input[type="submit"]:hover {
+  background-color: #e63c3f;
+  transform: scale(1.03);
+}
+
+/* Optional: style the terms box if used */
+.terms-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 10px;
+  max-height: 100px;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+  font-size: 14px;
+}

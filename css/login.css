@@ -1,0 +1,97 @@
+    body.back {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f9d423, #ff4e50);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .data {
+      background-color: white;
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .data h2 {
+      margin-bottom: 30px;
+      color: #333;
+      font-size: 24px;
+      letter-spacing: 1px;
+    }
+
+    table {
+      width: 100%;
+    }
+
+    label {
+      font-weight: 600;
+      font-size: 14px;
+      display: block;
+      margin-bottom: 6px;
+      color: #444;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      outline: none;
+      margin-bottom: 20px;
+      transition: border 0.3s;
+    }
+
+    input[type="email"]:focus,
+    input[type="password"]:focus {
+      border: 1px solid #ff4e50;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 12px;
+      background-color: #ff4e50;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #e63c3f;
+      transform: scale(1.03);
+    }
+
+    .extra-links {
+  margin-top: 20px;
+}
+
+.extra-links p:first-child {
+  text-align: right;
+  margin: 0;
+}
+
+.extra-links p:last-child {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.extra-links a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #0984e3;
+  transition: color 0.3s;
+}
+
+.extra-links a:hover {
+  color: #ed0909;
+}
