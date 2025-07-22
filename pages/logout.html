@@ -10,39 +10,45 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="../css/bag.css">
+  <link rel="stylesheet" href="css/bag.css">
 </head>
 
 <body>
-  <section id="section1"></section>
-  <div class="container-fluid bg-warning py-2 px-3">
-    <div class="d-flex flex-wrap justify-content-between align-items-center">
+  <div class="container-fluid bg-warning py-3 px-3">
+  <div class="row align-items-center">
 
-      <!-- Social Icons with hover class -->
-      <div class="d-flex align-items-center gap-3 social-icons">
-        <a href="#"><img src="./images/facebook-brands-solid.svg" alt="Facebook" width="24" height="24"></a>
-        <a href="https://www.instagram.com/_mr_adorable_s/" target="_blank"><img src="./images/logo-instagram.svg"
-            alt="Instagram" width="24" height="24"></a>
-        <a href="#"><img src="./images/logo-twitter.svg" alt="Twitter" width="24" height="24"></a>
-        <a href="https://wa.me/916369709010>"><img src="./images/logo-whatsapp.svg" alt="WhatsApp" width="24"
-            height="24"></a>
-      </div>
+    <!-- Social Icons: Left on desktop, top-center on mobile -->
+    <div class="col-12 col-md-6 mb-3 mb-md-0 d-flex justify-content-center justify-content-md-start gap-4">
+      <a href="#"><img src="../images/facebook-brands-solid.svg" alt="Facebook" width="24" height="24"></a>
+      <a href="https://www.instagram.com/_mr_adorable_s/" target="_blank">
+        <img src="../images/logo-instagram.svg" alt="Instagram" width="24" height="24">
+      </a>
+      <a href="#"><img src="../images/logo-twitter.svg" alt="Twitter" width="24" height="24"></a>
+      <a href="https://wa.me/916369709010">
+        <img src="../images/logo-whatsapp.svg" alt="WhatsApp" width="24" height="24">
+      </a>
+    </div>
 
-      <!-- Contact and Navigation with hover class -->
-      <div class="d-flex align-items-center justify-content-end gap-4 mt-2 mt-md-0 contact-nav">
-        <a href="tel:+916369709010" target="_blank"
-          class="text-dark text-decoration-none d-flex align-items-center gap-1">
-          <img src="./images/call-outline.svg" alt="Call" width="20" height="20">Call</a>
-        <a href="mailto:seventheesh07@gmail.com" class="text-dark text-decoration-none d-flex align-items-center gap-1">
-          <img src="./images/albums-outline.svg" alt="Email" width="20" height="20"> E Mail</a>
-        <a href="https://www.delhivery.com/tracking" target="_blank"
-          class="text-dark text-decoration-none d-flex align-items-center gap-1">
-          <img src="./images/albums-outline.svg" alt="Track" width="20" height="20"> Track Order</a>
-        <a href="./login.html" class="text-dark text-decoration-none d-flex align-items-center gap-1">
-          <img src="./images/log-out.svg" alt="Logged in" width="20" height="20">Log out</a>
-      </div>
+    <!-- Action Links: Right on desktop, bottom-center on mobile -->
+    <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end flex-wrap gap-2">
+      <a href="tel:+916369709010" class="text-dark text-decoration-none d-flex align-items-center gap-1">
+        <img src="../images/call-outline.svg" alt="Call" width="20" height="20"> Call
+      </a>
+      <a href="mailto:seventheesh07@gmail.com" class="text-dark text-decoration-none d-flex align-items-center gap-1">
+        <img src="../images/albums-outline.svg" alt="Email" width="20" height="20"> Email
+      </a>
+      <a href="https://www.delhivery.com/tracking" target="_blank" class="text-dark text-decoration-none d-flex align-items-center gap-1">
+        <img src="../images/albums-outline.svg" alt="Track Order" width="20" height="20"> Track Order
+      </a>
+    
+      <a href="./login.html" class="text-dark text-decoration-none d-flex align-items-center gap-1">
+          <img src="../images/log-out.svg" alt="Logged in" width="20" height="20">Log out
+        </a>
     </div>
   </div>
+</div>
+
+
 
 
   <section class="container-fluid bg-light py-2">
@@ -50,7 +56,7 @@
 
       <!-- Logo Column -->
       <div class="col-12 col-md-3">
-        <img src="./images/final logo.png" alt="Target Luggages" class="img-fluid" height="50">
+        <img src="../images/final logo.png" alt="Target Luggages" class="img-fluid" height="50">
       </div>
 
       <!-- Search Column -->
@@ -63,9 +69,12 @@
 
       <!-- Cart Button Column -->
       <div class="col-12 col-md-3 text-center text-md-end">
-        <button class="btn btn-warning px-2 my-3">
-          <img src="./images/cart-outline.svg" height="20px" width="20px" alt=""> Cart</button>
+        <button id="cart-toggle" class="btn btn-warning px-2 my-3" id="cart-toggle">
+          <img src="../images/cart-outline.svg" height="20px" width="20px" alt="cart">
+          Cart (<span id="cart-count">0</span>)
+        </button>
       </div>
+
     </div>
   </section>
 
@@ -74,19 +83,19 @@
       <ul class="nav flex-wrap justify-content-center">
         <!-- Common Items (Always Visible) -->
         <li class="nav-item">
-          <a class="nav-link text-dark bg-warning px-4 py-2 m-1 rounded fs-6" href="#section1">Home</a>
+          <a class="nav-link text-dark bg-warning px-4 py-2 m-1 rounded fs-6" href="#Home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark bg-warning px-4 py-2 m-1 rounded fs-6" href="#section2">Products</a>
+          <a class="nav-link text-dark bg-warning px-4 py-2 m-1 rounded fs-6" href="#Products">Products</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark bg-warning px-3 py-2 m-1 rounded fs-6" href="#section6">Brands</a>
+          <a class="nav-link text-dark bg-warning px-3 py-2 m-1 rounded fs-6" href="#Brands">Brands</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark bg-warning px-4 py-2 m-1 rounded fs-6" href="#section3">Bags & Luggages</a>
+          <a class="nav-link text-dark bg-warning px-4 py-2 m-1 rounded fs-6" href="#Bags & Luggages">Bags & Luggages</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark bg-warning px-4 py-2 m-1 rounded fs-6" href="#section4">Gallery</a>
+          <a class="nav-link text-dark bg-warning px-4 py-2 m-1 rounded fs-6" href="#Gallery">Gallery</a>
         </li>
 
         <!-- Mobile Line Break -->
@@ -94,31 +103,43 @@
 
         <!-- About Us and Contact Us -->
         <li class="nav-item">
-          <a class="nav-link text-dark bg-warning px-4 py-2 m-1 rounded fs-6" href="#section5">About Us</a>
+          <a class="nav-link text-dark bg-warning px-4 py-2 m-1 rounded fs-6" href="#About Us">About Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark bg-warning px-4 py-2 m-1 rounded fs-6" href="#section7">Contact Us</a>
+          <a class="nav-link text-dark bg-warning px-4 py-2 m-1 rounded fs-6" href="#Contact Us">Contact Us</a>
         </li>
       </ul>
     </nav>
   </div>
 
-
+<!-- wallpaper of the website -->
   <div class="container-fluid">
     <div class="col-12 col-md-12">
-      <img src="./images/bag.jpg" class="img-fluid" alt="Bag Image">
+      <img src="../images/bag.jpg" class="img-fluid" alt="Bag Image">
     </div>
   </div>
-  </div>
+  
 
-  <section id="section2" class="products-section py-5 bg-light">
+  <!-- products section -->
+
+  <div class="container">
+  <section id="Products" class="products-grid py-5 bg-light">
     <div class="container">
       <h2 class="text-center fw-bold mb-4">Products</h2>
+
+      <aside id="cart-sidebar" class="cart hidden">
+      <h2>Your Cart</h2>
+      <div id="cart-items"></div>
+      <div id="cart-footer">
+        <p><strong>Total:</strong> $<span id="cart-total">0</span></p>
+        <button onclick="clearCart()">Clear Cart</button>
+      </div>
+    </aside>
 
       <div class="d-flex flex-nowrap gap-4 overflow-auto">
         <!-- Product 1 -->
         <div class="card text-center" style="min-width: 220px;">
-          <img src="./images/bags/upbag1.jpg" class="card-img-top p-2" alt="Bag 10"
+          <img src="../images/bags/upbag1.jpg" class="card-img-top p-2" alt="Bag 10"
             style="height: 160px; object-fit: cover;">
           <div class="card-body p-2">
             <p class="card-title fw-semibold mb-1">Polestar Polyester Buddy</p>
@@ -129,7 +150,7 @@
 
         <!-- Product 2 -->
         <div class="card text-center" style="min-width: 220px;">
-          <img src="./images/bags/upbag2.jpg" class="card-img-top p-2" alt="Bag 11"
+          <img src="../images/bags/upbag2.jpg" class="card-img-top p-2" alt="Bag 11"
             style="height: 160px; object-fit: cover;">
           <div class="card-body p-2">
             <p class="card-title fw-semibold mb-1">American Tourister Crete</p>
@@ -140,7 +161,7 @@
 
         <!-- Product 3 -->
         <div class="card text-center" style="min-width: 220px;">
-          <img src="./images/bags/upbag3.jpg" class="card-img-top p-2" alt="Bag 12"
+          <img src="../images/bags/upbag3.jpg" class="card-img-top p-2" alt="Bag 12"
             style="height: 160px; object-fit: cover;">
           <div class="card-body p-2">
             <p class="card-title fw-semibold mb-1">Naaz Bags Collection</p>
@@ -151,7 +172,7 @@
 
         <!-- Product 4 -->
         <div class="card text-center" style="min-width: 220px;">
-          <img src="./images/bags/upbag4.jpg" class="card-img-top p-2" alt="Bag 13"
+          <img src="../images/bags/upbag4.jpg" class="card-img-top p-2" alt="Bag 13"
             style="height: 160px; object-fit: cover;">
           <div class="card-body p-2">
             <p class="card-title fw-semibold mb-1">Quechua Arpenaz Hiking</p>
@@ -162,7 +183,7 @@
 
         <!-- Product 5 -->
         <div class="card text-center" style="min-width: 220px;">
-          <img src="./images/bags/upbag5.jpg" class="card-img-top p-2" alt="Bag 14"
+          <img src="../images/bags/upbag5.jpg" class="card-img-top p-2" alt="Bag 14"
             style="height: 160px; object-fit: cover;">
           <div class="card-body p-2">
             <p class="card-title fw-semibold mb-1">Giordano Silver Luggage</p>
@@ -173,7 +194,7 @@
 
         <!-- Product 6 -->
         <div class="card text-center" style="min-width: 220px;">
-          <img src="./images/bags/upbag6.jpg" class="card-img-top p-2" alt="Bag 15"
+          <img src="../images/bags/upbag6.jpg" class="card-img-top p-2" alt="Bag 15"
             style="height: 160px; object-fit: cover;">
           <div class="card-body p-2">
             <p class="card-title fw-semibold mb-1">Zwart Orange Backpack</p>
@@ -182,65 +203,69 @@
           </div>
         </div>
       </div>
+
     </div>
   </section>
+  </div>
+  
+  
 
 
-  <section id="section6" class="container-fluid py-4 bg-light">
-    <h2 class="text-center fw-bold mb-4">Brands</h2>
-    <div class="row">
-      <div class="col-12">
+ <section id="Brands" class="container-fluid py-4 bg-light">
+  <h2 class="text-center fw-bold mb-4">Brands</h2>
+  <div class="row">
+    <div class="col-12">
+      <div class="overflow-hidden">
         <marquee behavior="scroll" direction="left" scrollamount="10">
-          <div class="d-flex gap-4 align-items-center">
+          <div class="d-inline-flex align-items-center gap-3">
 
-            <a href="#" target="_blank" class="bg-white border border-dark rounded shadow-sm p-3 d-block">
-              <img src="./images/company/allen solly.jpg" class="img-fluid" alt="Allen Solly"
-                style="max-height: 100px;">
+            <a href="#" target="_blank" class="bg-white border rounded shadow-sm p-5 text-center">
+              <img src="../images/company/allen solly.jpg" alt="Allen Solly" style="height: 60px; width: auto;">
             </a>
 
-            <a href="https://www.amazon.in/stores/Aristocrat/Homepage/page/1969030E-A82C-4506-A231-3F8EF6DF325B"
-              target="_blank" class="bg-white border border-dark rounded shadow-sm p-3 d-block">
-              <img src="./images/company/aristocrat.jpg" class="img-fluid" alt="Aristocrat" style="max-height: 100px;">
+            <a href="https://www.amazon.in/stores/Aristocrat/" target="_blank"
+              class="bg-white border rounded shadow-sm p-5 text-center">
+              <img src="../images/company/aristocrat.jpg" alt="Aristocrat" style="height: 60px; width: auto;">
             </a>
 
             <a href="https://www.fastrack.in/shop/bags" target="_blank"
-              class="bg-white border border-dark rounded shadow-sm p-3 d-block">
-              <img src="./images/company/fastrack.png" class="img-fluid" alt="Fastrack" style="max-height: 100px;">
+              class="bg-white border rounded shadow-sm p-5 text-center">
+              <img src="../images/company/fastrack.png" alt="Fastrack" style="height: 60px; width: auto;">
             </a>
 
-            <a href="https://www.linoperros.com/?srsltid=AfmBOop2iZmp9QJgi5WfCwoHSXc0jd8i7Po8v8IKE0Qg4sDLQAFkONKT"
-              target="_blank" class="bg-white border border-dark rounded shadow-sm p-3 d-block">
-              <img src="./images/company/lino.png" class="img-fluid" alt="Lino" style="max-height: 100px;">
+            <a href="https://www.linoperros.com" target="_blank"
+              class="bg-white border rounded shadow-sm p-5 text-center">
+              <img src="../images/company/lino.png" alt="Lino" style="height: 60px; width: auto;">
             </a>
 
             <a href="https://www.nike.com/in/w/mens-bags-backpacks-9xy71znik1" target="_blank"
-              class="bg-white border border-dark rounded shadow-sm p-3 d-block">
-              <img src="./images/company/Nike-Logo.jpg" class="img-fluid" alt="Nike" style="max-height: 100px;">
+              class="bg-white border rounded shadow-sm p-5 text-center">
+              <img src="../images/company/Nike-Logo.jpg" alt="Nike" style="height: 60px; width: auto;">
             </a>
 
-            <a href="https://tommyhilfiger.nnnow.com/tommy-hilfiger-women-accessories" target="_blank"
-              class="bg-white border border-dark rounded shadow-sm p-3 d-block">
-              <img src="./images/company/tommy.png" class="img-fluid" alt="Tommy" style="max-height: 100px;">
+            <a href="https://tommyhilfiger.nnnow.com" target="_blank"
+              class="bg-white border rounded shadow-sm p-5 text-center">
+              <img src="../images/company/tommy.png" alt="Tommy" style="height: 60px; width: auto;">
             </a>
 
-            <a href="https://wildcraft.com/?utm_source=google&utm_medium=cpc&utm_campaign=18th_Brand_Search_Only&gad_source=1&gad_campaignid=1642721018&gbraid=0AAAAADxazLR6QrPSWGgRSJeV8mjy_7h31&gclid=CjwKCAjwsZPDBhBWEiwADuO6y0s4UUX2a8u2OiHIek9TPmNgheI69QrgpVeMWOV3-RFWRqy-lEcaZBoCmGIQAvD_BwE"
-              target="_blank" class="bg-white border border-dark rounded shadow-sm p-3 d-block">
-              <img src="./images/company/wildcraft.png" class="img-fluid" alt="Wildcraft" style="max-height: 100px;">
+            <a href="https://wildcraft.com" target="_blank"
+              class="bg-white border rounded shadow-sm p-5 text-center">
+              <img src="../images/company/wildcraft.png" alt="Wildcraft" style="height: 60px; width: auto;">
             </a>
 
           </div>
         </marquee>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
 
 
 
 
 
-
-  <section id="section3" class="bags-section py-5" style="background: linear-gradient(to right, #f9f9f9, #e6e6e6);">
+  <section id="Bags & Luggages" class="bags-section py-5" style="background: linear-gradient(to right, #f9f9f9, #e6e6e6);">
     <div class="container">
       <h2 class="text-center mb-5 fw-bold">Bags & Luggages</h2>
 
@@ -248,7 +273,7 @@
         <!-- Bag Item Start -->
         <div class="col-12 col-sm-6 col-lg-4">
           <div class="card h-100 shadow-sm text-center border-0">
-            <img src="./images/bags/bag1.jpeg" class="card-img-top img-fluid p-3" alt="Trolley Bags"
+            <img src="../images/bags/bag1.jpeg" class="card-img-top img-fluid p-3" alt="Trolley Bags"
               style="height: 250px; object-fit: cover;">
             <div class="card-body">
               <p class="card-text fw-semibold">Trolley Bags</p>
@@ -258,7 +283,7 @@
         <!-- Repeat this for each item -->
         <div class="col-12 col-sm-6 col-lg-4">
           <div class="card text-center">
-            <img src="./images/bags/bag2.jpeg" class="card-img-top img-fluid p-3" alt="Duffle Bags"
+            <img src="../images/bags/bag2.jpeg" class="card-img-top img-fluid p-3" alt="Duffle Bags"
               style="height: 250px; object-fit: cover;">
             <div class="card-body">
               <p class="card-text fw-semibold">Duffle Bags</p>
@@ -268,7 +293,7 @@
 
         <div class="col-12 col-sm-6 col-lg-4">
           <div class="card text-center ">
-            <img src="./images/bags/bag4.jpeg" class="card-img-top img-fluid p-3" alt="Briefcase"
+            <img src="../images/bags/bag4.jpeg" class="card-img-top img-fluid p-3" alt="Briefcase"
               style="height: 250px; object-fit: cover;">
             <div class="card-body">
               <p class="card-text fw-semibold">Briefcase</p>
@@ -278,7 +303,7 @@
 
         <div class="col-12 col-sm-6 col-lg-4">
           <div class="card text-center">
-            <img src="./images/bags/bag5.jpeg" class="card-img-top img-fluid p-3" alt="Backpacks"
+            <img src="../images/bags/bag5.jpeg" class="card-img-top img-fluid p-3" alt="Backpacks"
               style="height: 250px; object-fit: cover;">
             <div class="card-body">
               <p class="card-text fw-semibold">Backpacks</p>
@@ -288,7 +313,7 @@
 
         <div class="col-12 col-sm-6 col-lg-4">
           <div class="card text-center ">
-            <img src="./images/bags/bag6.jpeg" class="card-img-top img-fluid p-3" alt="Rucksacks"
+            <img src="../images/bags/bag6.jpeg" class="card-img-top img-fluid p-3" alt="Rucksacks"
               style="height: 250px; object-fit: cover;">
             <div class="card-body">
               <p class="card-text fw-semibold">Rucksacks</p>
@@ -298,7 +323,7 @@
 
         <div class="col-12 col-sm-6 col-lg-4">
           <div class="card  text-center ">
-            <img src="./images/bags/bag7.jpg" class="card-img-top img-fluid p-3" alt="Barrel Bag"
+            <img src="../images/bags/bag7.jpg" class="card-img-top img-fluid p-3" alt="Barrel Bag"
               style="height: 250px; object-fit: cover;">
             <div class="card-body">
               <p class="card-text fw-semibold">Barrel Bag</p>
@@ -312,7 +337,7 @@
 
 
 
-  <section id="section4" class="gallery-section py-5" style="background: #fffdf7;">
+  <section id="Gallery" class="gallery-section py-5" style="background: #fffdf7;">
     <div class="container">
       <h2 class="text-center mb-4 fw-bold">Gallery</h2>
 
@@ -323,17 +348,17 @@
           <div class="carousel-item active">
             <div class="row g-4">
               <div class="col-6 col-md-3">
-                <img src="./images/bags/gbag1.jpg" class="img-fluid rounded shadow-sm gallery-img" alt="Backpack">
+                <img src="../images/bags/gbag1.jpg" class="img-fluid rounded shadow-sm gallery-img" alt="Backpack">
               </div>
               <div class="col-6 col-md-3">
-                <img src="./images/bags/gbag2.jpg" class="img-fluid rounded shadow-sm gallery-img" alt="Trolley Bags">
+                <img src="../images/bags/gbag2.jpg" class="img-fluid rounded shadow-sm gallery-img" alt="Trolley Bags">
               </div>
               <div class="col-6 col-md-3">
-                <img src="./images/bags/gbag3.jpeg" class="img-fluid rounded shadow-sm gallery-img"
+                <img src="../images/bags/gbag3.jpeg" class="img-fluid rounded shadow-sm gallery-img"
                   alt="Leather Duffle Bag">
               </div>
               <div class="col-6 col-md-3">
-                <img src="./images/bags/gbag4.jpeg" class="img-fluid rounded shadow-sm gallery-img" alt="Bag">
+                <img src="../images/bags/gbag4.jpeg" class="img-fluid rounded shadow-sm gallery-img" alt="Bag">
               </div>
             </div>
           </div>
@@ -342,16 +367,16 @@
           <div class="carousel-item">
             <div class="row g-4">
               <div class="col-6 col-md-3">
-                <img src="./images/bags/gbag5.jpeg" class="img-fluid rounded shadow-sm gallery-img" alt="Bag">
+                <img src="../images/bags/gbag5.jpeg" class="img-fluid rounded shadow-sm gallery-img" alt="Bag">
               </div>
               <div class="col-6 col-md-3">
-                <img src="./images/bags/gbag6.jpeg" class="img-fluid rounded shadow-sm gallery-img" alt="Bag">
+                <img src="../images/bags/gbag6.jpeg" class="img-fluid rounded shadow-sm gallery-img" alt="Bag">
               </div>
               <div class="col-6 col-md-3">
-                <img src="./images/bags/gbag7.jpeg" class="img-fluid rounded shadow-sm gallery-img" alt="Bag">
+                <img src="../images/bags/gbag7.jpeg" class="img-fluid rounded shadow-sm gallery-img" alt="Bag">
               </div>
               <div class="col-6 col-md-3">
-                <img src="./images/bags/gbag8.jpeg" class="img-fluid rounded shadow-sm gallery-img" alt="Bag">
+                <img src="../images/bags/gbag8.jpeg" class="img-fluid rounded shadow-sm gallery-img" alt="Bag">
               </div>
             </div>
           </div>
@@ -360,16 +385,16 @@
           <div class="carousel-item">
             <div class="row g-4">
               <div class="col-6 col-md-3">
-                <img src="./images/bags/gbag9.jpeg" class="img-fluid rounded shadow-sm gallery-img" alt="Bag">
+                <img src="../images/bags/gbag9.jpeg" class="img-fluid rounded shadow-sm gallery-img" alt="Bag">
               </div>
               <div class="col-6 col-md-3">
-                <img src="./images/bags/gbag10.jpeg" class="img-fluid rounded shadow-sm gallery-img" alt="Bag">
+                <img src="../images/bags/gbag10.jpeg" class="img-fluid rounded shadow-sm gallery-img" alt="Bag">
               </div>
               <div class="col-6 col-md-3">
-                <img src="./images/bags/gbag11.jpeg" class="img-fluid rounded shadow-sm gallery-img" alt="Bag">
+                <img src="../images/bags/gbag11.jpeg" class="img-fluid rounded shadow-sm gallery-img" alt="Bag">
               </div>
               <div class="col-6 col-md-3">
-                <img src="./images/bags/gbag12.jpeg" class="img-fluid rounded shadow-sm gallery-img" alt="Bag">
+                <img src="../images/bags/gbag12.jpeg" class="img-fluid rounded shadow-sm gallery-img" alt="Bag">
               </div>
             </div>
           </div>
@@ -395,7 +420,7 @@
 
 
 
-  <section id="section5" class="about-section py-5" style="background: linear-gradient(to right, #fef9f3, #fffaf0);">
+  <section id="About Us" class="about-section py-5" style="background: linear-gradient(to right, #fef9f3, #fffaf0);">
     <div class="container">
       <div class="row align-items-center">
 
@@ -414,7 +439,7 @@
 
         <!-- Right: Image -->
         <div class="col-md-6 text-center">
-          <img src="./images/bags/bag18.jpg" alt="Yellow Luggage with Hat" class="img-fluid rounded shadow"
+          <img src="../images/bags/bag18.jpg" alt="Yellow Luggage with Hat" class="img-fluid rounded shadow"
             style="max-height: 400px; width: 400px;">
         </div>
       </div>
@@ -423,7 +448,7 @@
 
 
 
-  <section id="section7" class="contact-section py-5">
+  <section id="Contact Us" class="contact-section py-5">
     <div class="container">
       <h2 class="text-center mb-5 fw-bold">Contact Us</h2>
       <div class="row g-4">
@@ -501,7 +526,7 @@
   </section>
 
   <!-- Link the external JS file -->
-  <script src="../js/contact.js"></script>
+  <script src="./js/contact.js"></script>
 
 
   <footer class="bg-dark text-white py-5">
@@ -513,9 +538,9 @@
           <h6 class="text-uppercase mb-3">Useful Links</h6>
           <ul class="list-unstyled">
             <li><a href="#" class="text-white text-decoration-none d-block mb-2">Privacy Policy</a></li>
-            <li><a href="#section3" class="text-white text-decoration-none d-block mb-2">Bags and Luggage</a></li>
-            <li><a href="#section5" class="text-white text-decoration-none d-block mb-2">About Us</a></li>
-            <li><a href="#" class="text-white text-decoration-none d-block mb-2">Brands</a></li>
+            <li><a href="#Bags and Luggage" class="text-white text-decoration-none d-block mb-2">Bags and Luggage</a></li>
+            <li><a href="#About Us" class="text-white text-decoration-none d-block mb-2">About Us</a></li>
+            <li><a href="#Brands" class="text-white text-decoration-none d-block mb-2">Brands</a></li>
             <li><a href="#" class="text-white text-decoration-none d-block mb-2">More</a></li>
           </ul>
         </div>
@@ -524,9 +549,9 @@
         <div class="col-3">
           <h6 class="text-uppercase mb-3">Navigate</h6>
           <ul class="list-unstyled">
-            <li><a href="#section1" class="text-white text-decoration-none d-block mb-2">Home</a></li>
-            <li><a href="#section2" class="text-white text-decoration-none d-block mb-2">Products</a></li>
-            <li><a href="#section4" class="text-white text-decoration-none d-block mb-2">Gallery</a></li>
+            <li><a href="#Home" class="text-white text-decoration-none d-block mb-2">Home</a></li>
+            <li><a href="#Products" class="text-white text-decoration-none d-block mb-2">Products</a></li>
+            <li><a href="#Gallery" class="text-white text-decoration-none d-block mb-2">Gallery</a></li>
           </ul>
         </div>
 
@@ -554,7 +579,7 @@
     </div>
   </footer>
 
-
+<script src="./js/cart.js"></script>
 </body>
 
 </html>
